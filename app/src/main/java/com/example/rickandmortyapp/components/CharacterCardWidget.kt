@@ -1,7 +1,5 @@
 package com.example.rickandmortyapp.components
-
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,7 +8,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material3.Card
@@ -25,18 +22,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 import com.example.rickandmortyapp.data.model.CharacterModel
-import com.example.rickandmortyapp.ui.theme.BorderColor
 import com.example.rickandmortyapp.ui.theme.CardBgColor
 import com.example.rickandmortyapp.ui.theme.Color1
 
 
 @Composable
- fun CharacterCard(onClick: () -> Unit, characterModel: CharacterModel) {
+ fun CharacterCard(onClick: (CharacterModel) -> Unit, characterModel: CharacterModel) {
     Card(
         modifier = Modifier
             .padding(end = 10.dp, start = 10.dp, top = 10.dp)
-            .width(400.dp)
-            .border(width = 1.dp, color = BorderColor, shape = RoundedCornerShape(6.dp)),
+            .width(400.dp),
+
         colors = CardDefaults.cardColors(
             containerColor = CardBgColor
         )
@@ -44,7 +40,7 @@ import com.example.rickandmortyapp.ui.theme.Color1
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier.clickable(onClick = onClick)
+            modifier = Modifier.clickable(onClick = { onClick(characterModel) })
         ) {
             Image(
                 painter = rememberAsyncImagePainter(model = characterModel.image),

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
@@ -41,7 +42,7 @@ import java.net.URLDecoder
 fun NavBar(navController: NavHostController) {
     val items = listOf(
         BottomNavItem("Karakterler", "characters", Icons.Default.Face),
-        BottomNavItem("Favoriler", "favorites", Icons.Default.Search),
+        BottomNavItem("Favoriler", "favorites", Icons.Default.FavoriteBorder),
         BottomNavItem("Konumlar", "locations", Icons.Default.LocationOn),
         BottomNavItem("Bölümler", "episodes", Icons.Default.Menu)
     )

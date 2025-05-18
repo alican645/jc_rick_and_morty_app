@@ -1,6 +1,6 @@
 package com.example.rickandmortyapp.pages.episodes_page
 
-import android.util.Log
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -22,60 +22,25 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.rickandmortyapp.ApiUtils
 import com.example.rickandmortyapp.R
 import com.example.rickandmortyapp.components.EpisodeCardWidget
-import com.example.rickandmortyapp.data.model.CharacterModel
-import com.example.rickandmortyapp.data.model.CharacterResponseModel
-import com.example.rickandmortyapp.data.model.EpisodeModel
-import com.example.rickandmortyapp.data.model.EpisodeResponseModel
+import com.example.rickandmortyapp.data.viewmodels.EpisodeViewModel
 import com.example.rickandmortyapp.ui.theme.Color1
-import retrofit2.Call
-import retrofit2.Response
 
 
+@SuppressLint("ViewModelConstructorInComposable")
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview
 @Composable
 fun EpisodesPage() {
-    val episodesList : SnapshotStateList<EpisodeModel?> = remember { mutableStateListOf() }
 
-    LaunchedEffect(true) {
-
-        try {
-            val characterDaoInterface = ApiUtils.getEpisodesDaoInterface()
-            characterDaoInterface.getAllEpisodes()
-                .enqueue(object : retrofit2.Callback<EpisodeResponseModel> {
-                    override fun onResponse(
-                        call: Call<EpisodeResponseModel?>,
-                        response: Response<EpisodeResponseModel?>,
-                    ) {
-
-                        for (i in response.body()!!.results) {
-                            episodesList.add(i)
-                        }
-                    }
-
-                    override fun onFailure(
-                        call: Call<EpisodeResponseModel?>,
-                        t: Throwable,
-                    ) {Log.i("episodes_page", t.message.toString())}
-
-                })
-        } catch (e: Exception) {
-            Log.e("episodes_page", e.message.toString())
-        }
-    }
+    val vm = EpisodeViewModel()
     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.TopCenter) {
         Image(
             painter = painterResource(R.drawable.bg_image),
@@ -119,7 +84,7 @@ fun EpisodesPage() {
                 .padding(bottom = 10.dp, top = 70.dp),
                 verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally){
-                itemsIndexed(episodesList) { index, model ->
+                itemsIndexed(vm.episodesList) { index, model ->
                     model?.let { EpisodeCardWidget(it.name,model.episode) }
                 }
             }

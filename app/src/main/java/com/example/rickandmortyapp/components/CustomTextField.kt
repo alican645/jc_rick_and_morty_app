@@ -23,7 +23,7 @@ import com.example.rickandmortyapp.ui.theme.Color1
 
 @Composable
 
-fun CustomTextField(searchParameter: MutableState<String>,onPress: ()-> Unit) {
+fun CustomTextField(searchParameter: MutableState<String>,onValueChange: (String)-> Unit) {
     TextField(
         modifier = Modifier
             .padding(end = 10.dp, start = 10.dp)
@@ -36,9 +36,7 @@ fun CustomTextField(searchParameter: MutableState<String>,onPress: ()-> Unit) {
         label = {
             Text("Karakterlerde Ara")
         },
-        onValueChange = {
-            searchParameter.value = it
-        },
+        onValueChange = onValueChange,
         leadingIcon = {
 
             Icon(
@@ -48,13 +46,13 @@ fun CustomTextField(searchParameter: MutableState<String>,onPress: ()-> Unit) {
 
         },
         trailingIcon = {
-            IconButton(onClick = onPress) {
+
                 Icon(
                     imageVector = Icons.Default.MoreVert,
                     contentDescription = "More",
                     tint = Color1
                 )
-            }
+
         },
         shape = TextFieldDefaults.shape
 
