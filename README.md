@@ -2,13 +2,13 @@ Elbette! 🎉 Aşağıda sana sunduğun `README.md` dosyasını daha **akıcı, 
 
 ---
 
-# 🧠 Rick and Morty Jetpack Compose Projesi
+# Rick and Morty Jetpack Compose Projesi
 
-> Bu proje, Rick and Morty API’sini kullanarak karakterler, bölümler ve lokasyonlar hakkında bilgi görüntüleyebileceğiniz. Jetpack Compose öğrenme amacıyla geliştirilmiş bir projedir.
+> Bu projede, Rick and Morty API’sini kullanarak karakterler, bölümler ve lokasyonlar hakkında bilgileri görünteleyebileceğimiz bir uygulama geliştirilmeye çalışılmıştır. Jetpack Compose öğrenmek amacıyla geliştirilmiş bir projedir.
 
 ---
 
-## 🗂️ Dosya Yapısı
+##  Dosya Yapısı
 
 ```
 .
@@ -65,47 +65,47 @@ Elbette! 🎉 Aşağıda sana sunduğun `README.md` dosyasını daha **akıcı, 
 
 ---
 
-## 📦 Kullanılan Paketler
+##  Kullanılan Paketler
 
 ### 1. `implementation("com.squareup.retrofit2:retrofit:2.9.0")`
-- **📌 Açıklama:** RESTful API'ye istek göndermemizi sağlayan kütüphane.
-- **🛠️ Kullanımı:** Rick and Morty API’sine istek atmak için kullanıldı. Karakter listesi, karakter detayları gibi veriler buradan alındı.
+- ** Açıklama:** RESTful API'ye istek göndermemizi sağlayan kütüphane.
+- ** Kullanımı:** Rick and Morty API’sine istek atmak için kullanıldı. Karakter listesi, karakter detayları gibi veriler buradan alındı.
 
 ---
 
 ### 2. `implementation("com.google.code.gson:gson:2.10")`
-- **📌 Açıklama:** JSON verisini Kotlin nesnelerine çevirir (ve tam tersi).
-- **🛠️ Kullanımı:** API'den gelen JSON yanıtlarını `CharacterModel`, `LocationModel` gibi sınıflara dönüştürmek için kullanıldı.
+- ** Açıklama:** JSON verisini Kotlin nesnelerine çevirir (ve tam tersi).
+- ** Kullanımı:** API'den gelen JSON yanıtlarını `CharacterModel`, `LocationModel` gibi sınıflara dönüştürmek için kullanıldı.
 
 ---
 
 ### 3. `implementation("com.squareup.retrofit2:converter-gson:2.9.0")`
-- **📌 Açıklama:** Retrofit ile Gson entegrasyonunu sağlar.
-- **🛠️ Kullanımı:** Retrofit ile gelen/giden verilerin otomatik olarak JSON-Kotlin dönüşümünü yapar. `.addConverterFactory(GsonConverterFactory.create())` şeklinde eklendi.
+- ** Açıklama:** Retrofit ile Gson entegrasyonunu sağlar.
+- ** Kullanımı:** Retrofit ile gelen/giden verilerin otomatik olarak JSON-Kotlin dönüşümünü yapar. `.addConverterFactory(GsonConverterFactory.create())` şeklinde eklendi.
 
 ---
 
 ### 4. `implementation("io.coil-kt:coil-compose:2.4.0")`
-- **📌 Açıklama:** Jetpack Compose ile uyumlu resim yükleme kütüphanesi.
-- **🛠️ Kullanımı:** Karakterlerin resimlerini API'den asenkron olarak yüklemek ve `Image` bileşeninde göstermek için kullanıldı. (`rememberAsyncImagePainter()`)
+- ** Açıklama:** Jetpack Compose ile uyumlu resim yükleme kütüphanesi.
+- ** Kullanımı:** Karakterlerin resimlerini API'den asenkron olarak yüklemek ve `Image` bileşeninde göstermek için kullanıldı. (`rememberAsyncImagePainter()`)
 
 ---
 
 ### 5. `implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.0")`
-- **📌 Açıklama:** ViewModel ile Jetpack Compose entegrasyonunu sağlar.
-- **🛠️ Kullanımı:** `CharactersPageActivity` gibi sayfalarda `CharacterViewModel` üzerinden veri almak ve yaşam döngüsüne bağlamak için kullanıldı. (`val viewModel: CharacterViewModel = viewModel()`)
+- ** Açıklama:** ViewModel ile Jetpack Compose entegrasyonunu sağlar.
+- ** Kullanımı:** `CharactersPageActivity` gibi sayfalarda `CharacterViewModel` üzerinden veri almak ve yaşam döngüsüne bağlamak için kullanıldı. (`val viewModel: CharacterViewModel = viewModel()`)
 
 ---
 
-## 🎨 Kazanımlar
+##  Kazanımlar
 
-- ✅ Jetpack Compose ile arayüz tasarımında layout mantığını kavrama  
-- ✅ API entegrasyonu deneyimi  
-- ✅ MVVM mimarisi ile çalışma deneyimi  
-- ✅ Coil paketi ile web üzerinden dinamik olarak resim yükleme  
-- ✅ Retrofit + Gson ile API çağrıları ve veri işleme  
-- ✅ Sayfalar arası veri aktarımı  
-- ✅ Bileşenleri parçalama ve yeniden kullanılabilir yapı oluşturma mantığı  
+-  Jetpack Compose ile arayüz tasarımında layout mantığını kavrama  
+-  API entegrasyonu deneyimi  
+-  MVVM mimarisi ile çalışma deneyimi  
+-  Coil paketi ile web üzerinden dinamik olarak resim yükleme  
+-  Retrofit + Gson ile API çağrıları ve veri işleme  
+-  Sayfalar arası veri aktarımı  
+-  Bileşenleri parçalama ve yeniden kullanılabilir yapı oluşturma mantığı  
 
 ---
 
@@ -128,7 +128,7 @@ Elbette! 🎉 Aşağıda sana sunduğun `README.md` dosyasını daha **akıcı, 
 
 | Platform     | Link                                                                 |
 |--------------|----------------------------------------------------------------------|
-| GitHub       | [Proje Sayfası](https://github.com/KULLANICI_ADI/rickmortyapp)      |
+| GitHub       | [Proje Sayfası](https://github.com/alican645/jc_rick_and_morty_app)      |
 | Rick & Morty API | [API Dokümantasyonu](https://rickandmortyapi.com/)                |
 
 ---
