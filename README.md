@@ -111,7 +111,10 @@ Elbette! 🎉 Aşağıda sana sunduğun `README.md` dosyasını daha **akıcı, 
 
 ## 📱 Ekran Görüntüleri (Opsiyonel)
 
-> Projeye ait ekran görüntülerini buraya ekleyebilirsin!
+<p align="center">
+  <img src="images/home-screen.png" width="300" alt="Ana Sayfa">
+  <img src="images/character-detail.png" width="300" alt="Karakter Detay">
+</p>
 
 ---
 
