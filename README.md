@@ -1,0 +1,12 @@
+1.implementation("com.squareup.retrofit2:retrofit:2.9.0")
+•Ne İşe Yarar: Bu, Retrofit adlı popüler bir ağ kütüphanesinin ana modülüdür. Temel görevi, Android uygulamanızın uzak sunucularla (API'ler) HTTP üzerinden iletişim kurmasını kolaylaştırmaktır.
+•Projenizdeki Kullanımı: Rick and Morty API'sine istekler göndermek (örneğin, karakter listesini almak, belirli bir karakterin detaylarını çekmek) için kullanılır. API endpoint'lerinizi (uç noktalarınızı) Kotlin arayüzleri (CharacterDaoInterface gibi) üzerinden tanımlamanızı ve bu arayüzleri kullanarak ağ çağrıları yapmanızı sağlar.
+2.implementation("com.google.code.gson:gson:2.10")
+•Ne İşe Yarar: Bu, Gson adlı bir Java (ve dolayısıyla Kotlin ile uyumlu) kütüphanesidir. JSON (JavaScript Object Notation) verilerini Java/Kotlin nesnelerine dönüştürme (deserialization) ve Java/Kotlin nesnelerini JSON formatına çevirme (serialization) işlemlerini yapar.
+•Projenizdeki Kullanımı: Rick and Morty API'sinden gelen JSON formatındaki yanıtları, projenizde tanımladığınız veri sınıflarına (CharacterModel, Location, CharacterResponseModel gibi) otomatik olarak dönüştürmek için kullanılır. Bu sayede API'den gelen karmaşık verilerle Kotlin kodunuzda daha kolay çalışabilirsiniz.
+3.implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+•Ne İşe Yarar: Bu, Retrofit için bir dönüştürücü (converter) modülüdür. Retrofit'in Gson kütüphanesini kullanarak JSON verilerini otomatik olarak işlemesini sağlar.
+•Projenizdeki Kullanımı: Retrofit, API'den bir yanıt aldığında veya API'ye bir istek gövdesi gönderdiğinde, bu dönüştürücü sayesinde gelen JSON verisini doğrudan CharacterModel gibi Kotlin nesnelerine çevirir veya göndereceğiniz Kotlin nesnesini JSON formatına dönüştürür. Bu, Retrofit.Builder() içinde .addConverterFactory(GsonConverterFactory.create()) şeklinde eklenerek kullanılır.
+4.implementation("io.coil-kt:coil-compose:2.4.0")
+•Ne İşe Yarar: Bu, Coil (Coroutine Image Loader) adlı bir resim yükleme kütüphanesinin Jetpack Compose için özel olarak tasarlanmış sürümüdür. İnternetten veya yerel kaynaklardan resimleri asenkron olarak yüklemek, önbelleğe almak ve Jetpack Compose Image bileşenlerinde görüntülemek için kullanılır.
+•Projenizdeki Kullanımı: Rick and Morty karakterlerinin resimlerini API'den gelen URL'ler aracılığıyla yükleyip CharacterCard gibi Compose bileşenlerinde göstermek için kullanılır. Örneğin, rememberAsyncImagePainter(model = character.image) şeklinde kullanılır.
