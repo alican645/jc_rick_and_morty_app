@@ -4,6 +4,9 @@
 
 
 <h2 style="font-size:36px; color:#ffd166;">🗂️ Dosya Yapısı</h2>
+``
+
+```
 ├── 📁 ui/
 │   └── 📁 theme/
 │       ├── 📄 Color.kt        - Uygulama renk paleti
@@ -53,32 +56,65 @@
     │   └── 📄 CharactersPageActivity.kt
     └── 📁 location_page/
         └── 📄 LocationPage.kt
-<h1 style="font-size:48px;">Bu Çok Büyük Bir Başlık</h1>
-<h2 style="font-size:36px;">Bu Büyük Başlık</h2>
-<h3 style="font-size:24px;">Bu Orta Boy Başlık</h3>
-<h4 style="font-size:18px;">Bu Küçük Başlık</h4>
-Kullanılan Paketler
 
-1.implementation("com.squareup.retrofit2:retrofit:2.9.0")
-•Ne İşe Yarar: Api çağrılıarınnda bulunmamızı sağlayan paket.
-•Projenizdeki Kullanımı: Rick and Morty API'sine istek göndermek iiçn kullanılıyor . Karakter listesini, karakterler ile alakalı detayları ve bölüm detayları gibi bilgirelri almak için kullanıldı.
+```
 
-2.implementation("com.google.code.gson:gson:2.10")
-•Ne İşe Yarar:  JSON (JavaScript Object Notation) verilerini Java/Kotlin nesnelerine dönüştürme (deserialization) ve Java/Kotlin nesnelerini JSON formatına çevirme (serialization) işlemlerini yapan paket. sayfalar arası veri aktarımı ve 
-•Projenizdeki Kullanımı: Rick and Morty API'sinden gelen JSON formatındaki yanıtları, projenizde tanımladığınız veri sınıflarına (CharacterModel, Location, CharacterResponseModel gibi) otomatik olarak dönüştürmek için kullanılır. Bu sayede API'den gelen karmaşık verilerle Kotlin kodunuzda daha kolay çalışabilirsiniz.
+<h2 style="font-size:36px; color:#77dd77;">📦 Kullanılan Paketler</h2>
 
-3.implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-•Ne İşe Yarar: Bu, Retrofit için bir dönüştürücü (converter) modülüdür. Retrofit'in Gson kütüphanesini kullanarak JSON verilerini otomatik olarak işlemesini sağlar.
-•Projenizdeki Kullanımı: Retrofit, API'den bir yanıt aldığında veya API'ye bir istek gövdesi gönderdiğinde, bu dönüştürücü sayesinde gelen JSON verisini doğrudan CharacterModel gibi Kotlin nesnelerine çevirir veya göndereceğiniz Kotlin nesnesini JSON formatına dönüştürür. Bu, Retrofit.Builder() içinde .addConverterFactory(GsonConverterFactory.create()) şeklinde eklenerek kullanılır.
+<h3 style="font-size:28px; color:#ff6ec7;">1. Retrofit2</h3>
+- **📌 Açıklama:** RESTful API'ye istek göndermemizi sağlayan kütüphane.
+- **🛠️ Kullanımı:** Rick and Morty API’sine istek atmak için kullanıldı. Karakter listesi, detay sayfaları gibi veriler buradan alındı.
 
-4.implementation("io.coil-kt:coil-compose:2.4.0")
-•Ne İşe Yarar: Bu, Coil (Coroutine Image Loader) adlı bir resim yükleme kütüphanesinin Jetpack Compose için özel olarak tasarlanmış sürümüdür. İnternetten veya yerel kaynaklardan resimleri asenkron olarak yüklemek, önbelleğe almak ve Jetpack Compose Image bileşenlerinde görüntülemek için kullanılır.
-•Projenizdeki Kullanımı: Rick and Morty karakterlerinin resimlerini API'den gelen URL'ler aracılığıyla yükleyip CharacterCard gibi Compose bileşenlerinde göstermek için kullanılır. Örneğin, rememberAsyncImagePainter(model = character.image) şeklinde kullanılır.
+<h3 style="font-size:28px; color:#ff6ec7;">2. Gson</h3>
+- **📌 Açıklama:** JSON verisini Kotlin nesnelerine çevirir (ve tam tersi).
+- **🛠️ Kullanımı:** API'den gelen JSON yanıtlarını `CharacterModel`, `LocationModel` gibi sınıflara dönüştürmek için kullanıldı.
 
-5.implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.0")
-•Ne İşe Yarar: Bu, Android Jetpack Lifecycle kütüphanesinin bir parçasıdır ve Jetpack Compose ile ViewModel entegrasyonunu sağlar. viewModel() gibi Compose fonksiyonlarını kullanarak ViewModel örneklerine kolayca erişmenizi ve bunları Composable fonksiyonlarınızın yaşam döngüsüne bağlamanızı mümkün kılar.
-•Projenizdeki Kullanımı: CharactersPageActivity gibi Composable ekranlarınızda CharacterViewModel gibi ViewModel sınıflarınızdan veri almak ve ViewModel fonksiyonlarını çağırmak için kullanılır. Örneğin, val viewModel: CharacterViewModel = viewModel() şeklinde ViewModel'a erişilir. Bu, ekran döndürme gibi konfigürasyon değişikliklerinde UI ile ilgili verilerin korunmasına yardımcı olur.
+<h3 style="font-size:28px; color:#ff6ec7;">3. Retrofit Gson Converter</h3>
+- **📌 Açıklama:** Retrofit ile Gson entegrasyonu sağlar.
+- **🛠️ Kullanımı:** Retrofit ile gelen/giden verilerin otomatik olarak JSON-Kotlin dönüşümünü yapar. `.addConverterFactory(GsonConverterFactory.create())` şeklinde eklendi.
 
-6.implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.0")
-•Ne İşe Yarar: Bu da Android Jetpack Lifecycle kütüphanesinin bir parçasıdır ve yaşam döngüsüne duyarlı bileşenler oluşturmak için temel çalışma zamanı bileşenlerini ve Kotlin eklentilerini (KTX) içerir. Özellikle ViewModelScope gibi Coroutine scope'larını ViewModel'ların yaşam döngüsüne bağlamak için önemlidir.
-•Projenizdeki Kullanımı: CharacterViewModel gibi ViewModel sınıflarınızda asenkron işlemler (örneğin, ağ istekleri) yapmak için kullanılan viewModelScope.launch { ... } gibi Coroutine scope'larının doğru şekilde çalışmasını ve ViewModel yok edildiğinde bu işlemlerin otomatik olarak iptal edilmesini sağlar. Ayrıca collectAsStateWithLifecycle() gibi yaşam döngüsüne duyarlı StateFlow ve SharedFlow toplama işlemlerinde de rol oynar.
+<h3 style="font-size:28px; color:#ff6ec7;">4. Coil Compose</h3>
+- **📌 Açıklama:** Jetpack Compose ile uyumlu resim yükleme kütüphanesi.
+- **🛠️ Kullanımı:** Karakterlerin resimlerini API'den asenkron olarak yüklemek ve `Image` bileşeninde göstermek için kullanıldı. (`rememberAsyncImagePainter()`)
+
+<h3 style="font-size:28px; color:#ff6ec7;">5. ViewModel Compose</h3>
+- **📌 Açıklama:** ViewModel ile Jetpack Compose entegrasyonunu sağlar.
+- **🛠️ Kullanımı:** `CharactersPageActivity` gibi sayfalarda `CharacterViewModel` üzerinden veri almak ve yaşam döngüsüne bağlamak için kullanıldı. (`val viewModel: CharacterViewModel = viewModel()`)
+
+<h3 style="font-size:28px; color:#ff6ec7;">6. Lifecycle Runtime KTX</h3>
+- **📌 Açıklama:** Yaşam döngüsüne duyarlı işlemler için gerekli kütüphane.
+- **🛠️ Kullanımı:** Asenkron işlemleri (`viewModelScope.launch { }`) ViewModel yaşam döngüsüyle senkronize etmek için kullanılır. Ayrıca `collectAsStateWithLifecycle()` gibi fonksiyonlarda destek sağlar.
+
+---
+
+<h2 style="font-size:36px; color:#ffd700;">🎨 Özellikler</h2>
+
+- ✅ Jetpack Compose ile modern arayüz tasarımı  
+- ✅ Rick and Morty API entegrasyonu  
+- ✅ MVVM mimarisi ile yapılandırılmış  
+- ✅ Coil ile karakter resimlerinin dinamik yüklenmesi  
+- ✅ Retrofit + Gson ile API çağrıları ve veri işleme  
+- ✅ Favoriler sayfası ile kullanıcı etkileşimi  
+
+---
+
+<h2 style="font-size:36px; color:#dda0dd;">📱 Ekran Görüntüleri (Opsiyonel)</h2>
+
+> Projeye ait ekran görüntülerini buraya ekleyebilirsin!
+
+---
+
+<h2 style="font-size:36px; color:#87ceeb;">🔗 Bağlantılar</h2>
+
+| Platform     | Link                                                                 |
+|--------------|----------------------------------------------------------------------|
+| GitHub       | [Proje Sayfası](https://github.com/KULLANICI_ADI/rickmortyapp )      |
+| Rick & Morty API | [API Dokümantasyonu](https://rickandmortyapi.com/ )                |
+
+---
+
+<h2 style="font-size:36px; color:#ffb6c1;">📬 İletişim</h2>
+
+E-posta: [isimsoyisim@email.com](mailto:isimsoyisim@email.com)  
+LinkedIn: [linkedin.com/in/kullaniciadi](https://www.linkedin.com/in/kullaniciadi )  
+Twitter: [@kullaniciadi](https://twitter.com/kullaniciadi )
