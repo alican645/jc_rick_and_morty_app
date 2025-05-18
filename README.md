@@ -111,7 +111,16 @@ Elbette! 🎉 Aşağıda sana sunduğun `README.md` dosyasını daha **akıcı, 
 
 ## 📱 Ekran Görüntüleri (Opsiyonel)
 
-> Projeye ait ekran görüntülerini buraya ekleyebilirsin!
+<p align="center">
+  <img src="https://github.com/alican645/jc_rick_and_morty_app/blob/main/app/images/Screenshot_1747582043.png" width="300" alt="Karakterler Sayfası ">
+  <img src="https://github.com/alican645/jc_rick_and_morty_app/blob/main/app/images/Screenshot_1747582079.png" width="300" alt="Karakter Sayfası 2">
+  <img src="https://github.com/alican645/jc_rick_and_morty_app/blob/main/app/images/Screenshot_1747582056.png" width="300" alt="Favoriler Sayfası">
+  <img src="https://github.com/alican645/jc_rick_and_morty_app/blob/main/app/images/Screenshot_1747582066.png" width="300" alt="Karakter Detay Sayfası">
+  <img src="https://github.com/alican645/jc_rick_and_morty_app/blob/main/app/images/Screenshot_1747583637.png" width="300" alt="Konumlar Sayfası">
+  <img src="https://github.com/alican645/jc_rick_and_morty_app/blob/main/app/images/Screenshot_1747583708.png" width="300" alt="Bölümler Sayfası">
+</p>
+
+
 
 ---
 
