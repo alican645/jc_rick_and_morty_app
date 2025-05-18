@@ -52,7 +52,7 @@ fun EpisodesPage() {
             )
         TopAppBar(
             title = {
-                Text("Konum")
+                Text("Bölümler")
             },
             actions = {
                 Icon(

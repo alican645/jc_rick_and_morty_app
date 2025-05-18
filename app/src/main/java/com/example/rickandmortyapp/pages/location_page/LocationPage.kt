@@ -46,7 +46,7 @@ fun LocationsPage() {
             )
         TopAppBar(
             title = {
-                Text("Konum")
+                Text("Konumlar")
             },
             actions = {
                 Icon(
