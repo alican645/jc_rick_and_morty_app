@@ -109,7 +109,7 @@ Elbette! 🎉 Aşağıda sana sunduğun `README.md` dosyasını daha **akıcı, 
 
 ---
 
-## 📱 Ekran Görüntüleri (Opsiyonel)
+## 📱 Ekran Görüntüleri 
 
 <p align="center">
   <img src="https://github.com/alican645/jc_rick_and_morty_app/blob/main/app/images/Screenshot_1747582043.png" width="300" alt="Karakterler Sayfası ">
