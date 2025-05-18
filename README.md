@@ -112,7 +112,9 @@ Elbette! 🎉 Aşağıda sana sunduğun `README.md` dosyasını daha **akıcı, 
 ## 📱 Ekran Görüntüleri (Opsiyonel)
 
 <p align="center">
-  <img src="images/home-screen.png" width="300" alt="Ana Sayfa">
+  <img src="https://github.com/alican645/jc_rick_and_morty_app/blob/main/app/images/Screenshot_1747582043.png" width="300" alt="Karakterler Sayfası ">
+  <img src="images/character-detail.png" width="300" alt="Karakter Detay">
+  <img src="images/character-detail.png" width="300" alt="Karakter Detay">
   <img src="images/character-detail.png" width="300" alt="Karakter Detay">
 </p>
 
