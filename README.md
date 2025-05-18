@@ -109,7 +109,7 @@
 
 ---
 
-## 📱 Ekran Görüntüleri 
+##  Ekran Görüntüleri 
 
 <p align="center">
   <img src="https://github.com/alican645/jc_rick_and_morty_app/blob/main/app/images/Screenshot_1747582043.png" width="300" alt="Karakterler Sayfası ">
@@ -124,7 +124,7 @@
 
 ---
 
-## 🔗 Bağlantılar
+##  Bağlantılar
 
 | Platform     | Link                                                                 |
 |--------------|----------------------------------------------------------------------|
@@ -133,7 +133,7 @@
 
 ---
 
-## 📬 İletişim
+##  İletişim
 
 📧 E-posta: [alican.aydin010@gmail.com](mailto:alican.aydin010@gmail.com)  
 🔗 LinkedIn: [linkedin.com/in/ali-can-aydın-420815253](https://www.linkedin.com/in/ali-can-aydin-420815253)  
