@@ -62,41 +62,35 @@
 <h2 style="font-size:36px; color:#77dd77;">📦 Kullanılan Paketler</h2>
 
 <h3 style="font-size:28px; color:#ff6ec7;">1. Retrofit2</h3>
-<h3 style="font-size:28px; color:#ff6ec7;">1. Retrofit2</h3>
-*Açıklama:*
+Açıklama:
 RESTful API'ye istek göndermemizi sağlayan kütüphane.
-**Kullanımı:**
+Kullanımı:
 Rick and Morty API’sine istek atmak için kullanıldı. Karakter listesi, karakter detayları gibi veriler buradan alındı.
 
 <h3 style="font-size:28px; color:#ff6ec7;">2. Gson</h3>
-- **Açıklama:**
+Açıklama:
 JSON verisini Kotlin nesnelerine çevirir (ve tam tersi).
-- **🛠️ Kullanımı:** 
+Kullanımı: 
 API'den gelen JSON yanıtlarını `CharacterModel`, `LocationModel` gibi sınıflara dönüştürmek için kullanıldı.
 
 <h3 style="font-size:28px; color:#ff6ec7;">3. Retrofit Gson Converter</h3>
-- **Açıklama:**
+Açıklama:
 Retrofit ile Gson entegrasyonu sağlar.
-- **🛠️ Kullanımı:** 
+Kullanımı:
 Retrofit ile gelen/giden verilerin otomatik olarak JSON-Kotlin dönüşümünü yapar. `.addConverterFactory(GsonConverterFactory.create())` şeklinde eklendi.
 
 <h3 style="font-size:28px; color:#ff6ec7;">4. Coil Compose</h3>
-- **Açıklama:**
+Açıklama:
 Jetpack Compose ile uyumlu resim yükleme kütüphanesi.
-- **🛠️ Kullanımı:**
+Kullanımı:
 Karakterlerin resimlerini API'den asenkron olarak yüklemek ve `Image` bileşeninde göstermek için kullanıldı. (`rememberAsyncImagePainter()`)
 
 <h3 style="font-size:28px; color:#ff6ec7;">5. ViewModel Compose</h3>
-- **Açıklama:**
+Açıklama:
 ViewModel ile Jetpack Compose entegrasyonunu sağlar.
-- **🛠️ Kullanımı:** 
+Kullanımı:
 `CharactersPageActivity` gibi sayfalarda `CharacterViewModel` üzerinden veri almak ve yaşam döngüsüne bağlamak için kullanıldı. (`val viewModel: CharacterViewModel = viewModel()`)
 
-<h3 style="font-size:28px; color:#ff6ec7;">6. Lifecycle Runtime KTX</h3>
-- **Açıklama:**
-Yaşam döngüsüne duyarlı işlemler için gerekli kütüphane.
-- **🛠️ Kullanımı:** 
-Asenkron işlemleri (`viewModelScope.launch { }`) ViewModel yaşam döngüsüyle senkronize etmek için kullanılır. Ayrıca `collectAsStateWithLifecycle()` gibi fonksiyonlarda destek sağlar.
 
 
 <h2 style="font-size:36px; color:#ffd700;">🎨 Özellikler</h2>
