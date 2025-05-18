@@ -135,7 +135,7 @@ Elbette! 🎉 Aşağıda sana sunduğun `README.md` dosyasını daha **akıcı, 
 
 ## 📬 İletişim
 
-📧 E-posta: [alican.aydin010@email.com](mailto:alican.aydin010@email.com)  
+📧 E-posta: [alican.aydin010@gmail.com](mailto:alican.aydin010@gmail.com)  
 🔗 LinkedIn: [linkedin.com/in/ali-can-aydın-420815253](https://www.linkedin.com/in/ali-can-aydin-420815253)  
 
 ---
