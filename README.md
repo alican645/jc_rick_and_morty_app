@@ -1,4 +1,9 @@
-.
+<h1 style="font-size:48px; color:#61dafb;">🧠 Rick and Morty Jetpack Compose Projesi</h1>
+
+<p><em>Bu proje, Rick and Morty API’sini kullanarak karakterler, bölümler ve lokasyonlar hakkında bilgi görüntüleyebileceğiniz. Jetpack Compose öğrenme amacıyla geliştirilmiş bir projedir</em></p>
+
+
+<h2 style="font-size:36px; color:#ffd166;">🗂️ Dosya Yapısı</h2>
 ├── 📁 ui/
 │   └── 📁 theme/
 │       ├── 📄 Color.kt        - Uygulama renk paleti
